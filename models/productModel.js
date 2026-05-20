@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/scatch");
-
+// No local mongoose.connect() here because the app connection is handled in config/mongoose-connection.js
 const productSchema = mongoose.Schema({
   image: Buffer,
 

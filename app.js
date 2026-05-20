@@ -2,6 +2,12 @@
 require("dotenv").config(); //.config me .env file ke variable ko use kar payenge
 //process.env.DEBUG = "development:mongoose";--> isko hata diye due to setup ho gya debugger ka
 
+const dns=require("dns");
+dns.setServers([
+     '1.1.1.1',
+     '8.8.8.8'
+])
+
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -44,6 +50,6 @@ app.use("/products", productsRouter);
 
 
 // Server listening on port 3000
-app.listen(3000, '0.0.0.0', () => {
+app.listen(3000,  () => {
   console.log('Server running');
 });
