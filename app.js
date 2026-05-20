@@ -14,7 +14,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const db = require("./config/mongoose-connection");
+require("./config/mongoose-connection");
 const session = require("express-session");
 const flash = require("connect-flash");
 const indexRouter = require("./routes/index");
@@ -33,6 +33,22 @@ app.use(
    })
 )
 app.use(flash());
+
+// expose auth state to all views
+app.use((req, res, next) => {
+  res.locals.loggedin = false;
+  if (req.cookies && req.cookies.token) {
+    try {
+      const decoded = jwt.verify(req.cookies.token, process.env.JWT_KEY);
+      if (decoded && decoded.email) {
+        res.locals.loggedin = true;
+      }
+    } catch (err) {
+      res.locals.loggedin = false;
+    }
+  }
+  next();
+});
 
 // view engine
 app.set("view engine", "ejs");
