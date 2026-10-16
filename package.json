@@ -1,12 +1,19 @@
 {
   "name": "scatch",
   "version": "1.0.0",
-  "description": "SCATCH - A Bag seller website",
+  "description": "SCATCH - Premium Bags E-Commerce Store | Buy & Sell Bags Online",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "ecommerce",
+    "bags",
+    "marketplace",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",

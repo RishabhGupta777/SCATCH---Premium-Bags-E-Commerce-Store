@@ -1,6 +1,12 @@
-# SCATCH - A Bag Seller Website
+# SCATCH - Premium Bags E-Commerce Store
 
-An e-commerce web application for purchasing bags built with Node.js, Express, MongoDB, and EJS.
+> A modern, full-stack online marketplace to discover, buy, and sell premium bags. Built with Node.js, Express, MongoDB, and EJS.
+
+## Features & Highlights
+- **Product Catalog & Showcase:** Explore bags with customizable colors and styling.
+- **Cart & Order Management:** Add to cart with real-time bill and discount calculation.
+- **Role-based Access:** Dedicated portals and controls for Owners (Sellers) and Users (Buyers).
+- **Secure Authentication:** JWT authentication, bcrypt password hashing, and cookie sessions.
 
 ## Development Notes & Setup
 
