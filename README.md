@@ -1,3 +1,9 @@
+# SCATCH - A Bag Seller Website
+
+An e-commerce web application for purchasing bags built with Node.js, Express, MongoDB, and EJS.
+
+## Development Notes & Setup
+
 1.npm init -y
 2.npm i express mongoose 
 3.npm i jsonwebtoken cookie-parcer bcrypt multer
