@@ -33,7 +33,7 @@ set Environemnet var throughout whole process --> 2. set NODE_ENV=development
 
 add this to .env
 DEBUG=development:mongoose
-MONGO_URI=mongodb://127.0.0.1:27017/scatch
+MONGODB_URI=your_mongodb_connection_uri
 
 run npm start
 

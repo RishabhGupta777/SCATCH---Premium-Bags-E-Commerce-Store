@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const dbgr = require("debug")("development:mongoose");
-                            //kis plase me ho , kha se mssg aa raha h(mongoose me se)   
+
+if (!process.env.MONGODB_URI) {
+    console.error("Warning: MONGODB_URI is not set in your .env file");
+}
 
 mongoose.connect(process.env.MONGODB_URI)
 .then(function(){ //agar connect ho gaya then
